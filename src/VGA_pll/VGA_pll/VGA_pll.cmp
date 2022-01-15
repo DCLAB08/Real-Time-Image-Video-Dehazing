@@ -1,0 +1,11 @@
+	component VGA_pll is
+		port (
+			clk_clk       : in  std_logic := 'X'; -- clk
+			clk_100m_clk  : out std_logic;        -- clk
+			clk_120m_clk  : out std_logic;        -- clk
+			clk_75m_clk   : out std_logic;        -- clk
+			clk_800k_clk  : out std_logic;        -- clk
+			reset_reset_n : in  std_logic := 'X'  -- reset_n
+		);
+	end component VGA_pll;
+

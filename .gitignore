@@ -1,0 +1,29 @@
+# ~
+/*.summary
+/*.rpt
+/*.sld
+/*.bak
+/DE2_115.qsf
+/dehaze.qpf
+/*.pin
+/*.smsg
+/*.jdi
+/*.done
+/*.txt
+
+## ~
+/incremental_db
+/db
+/.qsys_edit
+/CModel/.vscode
+/CModel/build
+/CModel/*.jpeg
+/CModel/*.jpg
+/CModel/*.png
+
+# output_files
+/output_files
+!/output_files/*.sof
+
+/src/*.bsf
+/src/*.ppf

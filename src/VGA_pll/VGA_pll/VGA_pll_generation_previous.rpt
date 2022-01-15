@@ -1,0 +1,41 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\dclab04\Desktop\Jim_DEHAZE\VGA_pll\VGA_pll.qsys --block-symbol-file --output-directory=C:\Users\dclab04\Desktop\Jim_DEHAZE\VGA_pll\VGA_pll --family="Cyclone IV E" --part=Unknown
+Progress: Loading VGA_pll/VGA_pll.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 15.0]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: VGA_pll.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: VGA_pll.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: VGA_pll.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Warning: VGA_pll.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\dclab04\Desktop\Jim_DEHAZE\VGA_pll\VGA_pll.qsys --synthesis=VERILOG --output-directory=C:\Users\dclab04\Desktop\Jim_DEHAZE\VGA_pll\VGA_pll\synthesis --family="Cyclone IV E" --part=Unknown
+Progress: Loading VGA_pll/VGA_pll.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 15.0]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: VGA_pll.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: VGA_pll.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: VGA_pll.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Warning: VGA_pll.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Info: VGA_pll: Generating VGA_pll "VGA_pll" for QUARTUS_SYNTH
+Info: altpll_0: "VGA_pll" instantiated altpll "altpll_0"
+Info: rst_controller: "VGA_pll" instantiated altera_reset_controller "rst_controller"
+Info: VGA_pll: Done "VGA_pll" with 3 modules, 5 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

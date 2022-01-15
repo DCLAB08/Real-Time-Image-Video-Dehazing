@@ -1,0 +1,15 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst VGA_pll.clk_0 -pg 1 -lvl 1 -y 50
+preplace inst VGA_pll -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst VGA_pll.altpll_0 -pg 1 -lvl 2 -y 30
+preplace netloc EXPORT<net_container>VGA_pll</net_container>(MASTER)VGA_pll.clk_75m,(MASTER)altpll_0.c1) 1 2 1 NJ
+preplace netloc EXPORT<net_container>VGA_pll</net_container>(MASTER)VGA_pll.clk_800k,(MASTER)altpll_0.c3) 1 2 1 NJ
+preplace netloc EXPORT<net_container>VGA_pll</net_container>(MASTER)altpll_0.c0,(MASTER)VGA_pll.clk_150m) 1 2 1 NJ
+preplace netloc EXPORT<net_container>VGA_pll</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)VGA_pll.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>VGA_pll</net_container>(MASTER)altpll_0.c2,(MASTER)VGA_pll.clk_120m) 1 2 1 NJ
+preplace netloc EXPORT<net_container>VGA_pll</net_container>(SLAVE)VGA_pll.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>VGA_pll</net_container>(MASTER)clk_0.clk,(SLAVE)altpll_0.inclk_interface) 1 1 1 N
+preplace netloc POINT_TO_POINT<net_container>VGA_pll</net_container>(SLAVE)altpll_0.inclk_interface_reset,(MASTER)clk_0.clk_reset) 1 1 1 N
+levelinfo -pg 1 0 50 540
+levelinfo -hier VGA_pll 60 90 270 460
