@@ -1,24 +1,26 @@
-# FPGA Dehazer 💨🚫
+# FPGA Dehazer
 The aim of this project is to achieve real time dehazing for video (or image).
 
 We utilize DE2-115 FPGA, ethernet connection, camera TRDB-D5M and display through VGA in this project. 
 
-With our own router, we achieve 10 FPS in RGB24 and 15 FPS in RGB16.
+With our own router, we achieve 10 FPS in RGB24 and 15 FPS in RGB16. 
 
 ## Block Diagram
-// TODO
+
+![image](https://user-images.githubusercontent.com/55227796/149613982-843ba80c-0894-459e-a47f-762827ac51a2.png)
+
+> The diagram shows the connection of ethernet mode. In camera mode, the data and valid line should be from RAW2RGB module.
 
 ## Introduction
-This project is the final project for NTUEE DCLab 110-1.
+This project is the final project for NTUEE Digital Circuits Lab, 2021 Fall.
 Contributor:
 * b07901001@g.ntu.edu.tw
-* b07901021@g.ntu.edu.tw
+* a1687193@gmail.com
 * b07901036@g.ntu.edu.tw
 
-## Feature
+## Features
 - Dehaze picture or video input via ethernet connection or camera
 - Achieve real time usage
-
 
 ## Limitation
 - Currently only support 640x480 image input
@@ -40,7 +42,7 @@ Run FPGA and send image (or video) by python
 > For ethernet & FPGA usage, we refer to alexforencich's project.
 > [Reference here](https://github.com/alexforencich/verilog-ethernet/tree/master/example/DE2-115/fpga)
 
-Make sure your PC (python) is in the same network as your FPGA
+Make sure your PC (python) is in the same local network as your FPGA
 
 #### FPGA
 - Please config src/Ethernet.v Line 200 and use your own IP address
@@ -66,19 +68,57 @@ Config DE2-115/config.h and define Camera
 > [Reference here](https://github.com/aabdelfattah/alhaitham-hardware)
 
 
-
 ## Compile
 - For **camera** input, you can skip compilation and use DE2_115_camera.sof directly.
 - For **ethernet** input,  make sure you modify IP address for FPGA and compile through Quartus.
 
 #### 📝 File needed for compilation
-// TODO
+We use quartus to compile and generate the output files.
+Remember to import assignment (**fpga.qsf**) and add the following files to the path of your project. 
 
+**all files** in src/
+**all files** in DE2-115/
 
+verilog-ethernet/rtl/arp.v
+verilog-ethernet/rtl/arp_cache.v
+verilog-ethernet/rtl/arp_eth_rx.v
+verilog-ethernet/rtl/arp_eth_tx.v
+verilog-ethernet/rtl/axis_gmii_rx.v
+verilog-ethernet/rtl/axis_gmii_tx.v
+verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v
+verilog-ethernet/rtl/eth_mac_1g_rgmii.v
+verilog-ethernet/rtl/eth_mac_1g.v
+verilog-ethernet/rtl/eth_axis_rx.v
+verilog-ethernet/rtl/eth_axis_tx.v
+verilog-ethernet/rtl/eth_arb_mux.v
+verilog-ethernet/rtl/eth_mux.v
+verilog-ethernet/rtl/iddr.v
+verilog-ethernet/rtl/ip.v
+verilog-ethernet/rtl/ip_arb_mux.v
+verilog-ethernet/rtl/ip_complete.v
+verilog-ethernet/rtl/ip_eth_rx.v
+verilog-ethernet/rtl/ip_eth_tx.v
+verilog-ethernet/rtl/ip_mux.v
+verilog-ethernet/rtl/lfsr.v
+verilog-ethernet/rtl/oddr.v
+verilog-ethernet/rtl/rgmii_phy_if.v
+verilog-ethernet/rtl/ssio_ddr_in.v
+verilog-ethernet/rtl/ssio_ddr_out.v
+verilog-ethernet/rtl/udp_complete.v
+verilog-ethernet/rtl/udp_checksum_gen.v
+verilog-ethernet/rtl/udp.v
+verilog-ethernet/rtl/udp_ip_rx.v
+verilog-ethernet/rtl/udp_ip_tx.v
+verilog-ethernet/lib/axis/rtl/arbiter.v
+verilog-ethernet/lib/axis/rtl/axis_fifo.v
+verilog-ethernet/lib/axis/rtl/axis_async_fifo.v
+verilog-ethernet/lib/axis/rtl/axis_async_fifo_adapter.v
+verilog-ethernet/lib/axis/rtl/priority_encoder.v
+verilog-ethernet/lib/axis/rtl/sync_reset.v
 
+fpga.sdc
 
 ## Future work
 - Support jpg input format and implement decoder on FPGA
-- Support higher resolution
-- Increase FPS
-- Solve display failure issue
+- Support higher resolution and higher FPS
+- Solve display failure issue (Maybe use TCP instead or add check module on FPGA)
