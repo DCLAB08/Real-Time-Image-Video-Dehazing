@@ -10,6 +10,7 @@
 /*.jdi
 /*.done
 /*.txt
+/*.sof
 
 ## ~
 /incremental_db
@@ -22,7 +23,7 @@
 /CModel/*.png
 
 # output_files
-/output_files
+/output_files/
 !/output_files/*.sof
 
 /src/*.bsf
