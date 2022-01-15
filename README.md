@@ -13,6 +13,7 @@ With our own router, we achieve 10 FPS in RGB24 and 15 FPS in RGB16.
 
 ## Introduction
 This project is the final project for NTUEE Digital Circuits Lab, 2021 Fall.
+
 Contributor:
 * b07901001@g.ntu.edu.tw
 * a1687193@gmail.com
@@ -76,47 +77,47 @@ Config DE2-115/config.h and define Camera
 We use quartus to compile and generate the output files.
 Remember to import assignment (**fpga.qsf**) and add the following files to the path of your project. 
 
-**all files** in src/
-**all files** in DE2-115/
+* **all files** in src/
+* **all files** in DE2-115/
 
-verilog-ethernet/rtl/arp.v
-verilog-ethernet/rtl/arp_cache.v
-verilog-ethernet/rtl/arp_eth_rx.v
-verilog-ethernet/rtl/arp_eth_tx.v
-verilog-ethernet/rtl/axis_gmii_rx.v
-verilog-ethernet/rtl/axis_gmii_tx.v
-verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v
-verilog-ethernet/rtl/eth_mac_1g_rgmii.v
-verilog-ethernet/rtl/eth_mac_1g.v
-verilog-ethernet/rtl/eth_axis_rx.v
-verilog-ethernet/rtl/eth_axis_tx.v
-verilog-ethernet/rtl/eth_arb_mux.v
-verilog-ethernet/rtl/eth_mux.v
-verilog-ethernet/rtl/iddr.v
-verilog-ethernet/rtl/ip.v
-verilog-ethernet/rtl/ip_arb_mux.v
-verilog-ethernet/rtl/ip_complete.v
-verilog-ethernet/rtl/ip_eth_rx.v
-verilog-ethernet/rtl/ip_eth_tx.v
-verilog-ethernet/rtl/ip_mux.v
-verilog-ethernet/rtl/lfsr.v
-verilog-ethernet/rtl/oddr.v
-verilog-ethernet/rtl/rgmii_phy_if.v
-verilog-ethernet/rtl/ssio_ddr_in.v
-verilog-ethernet/rtl/ssio_ddr_out.v
-verilog-ethernet/rtl/udp_complete.v
-verilog-ethernet/rtl/udp_checksum_gen.v
-verilog-ethernet/rtl/udp.v
-verilog-ethernet/rtl/udp_ip_rx.v
-verilog-ethernet/rtl/udp_ip_tx.v
-verilog-ethernet/lib/axis/rtl/arbiter.v
-verilog-ethernet/lib/axis/rtl/axis_fifo.v
-verilog-ethernet/lib/axis/rtl/axis_async_fifo.v
-verilog-ethernet/lib/axis/rtl/axis_async_fifo_adapter.v
-verilog-ethernet/lib/axis/rtl/priority_encoder.v
-verilog-ethernet/lib/axis/rtl/sync_reset.v
+* verilog-ethernet/rtl/arp.v
+* verilog-ethernet/rtl/arp_cache.v
+* verilog-ethernet/rtl/arp_eth_rx.v
+* verilog-ethernet/rtl/arp_eth_tx.v
+* verilog-ethernet/rtl/axis_gmii_rx.v
+* verilog-ethernet/rtl/axis_gmii_tx.v
+* verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v
+* verilog-ethernet/rtl/eth_mac_1g_rgmii.v
+* verilog-ethernet/rtl/eth_mac_1g.v
+* verilog-ethernet/rtl/eth_axis_rx.v
+* verilog-ethernet/rtl/eth_axis_tx.v
+* verilog-ethernet/rtl/eth_arb_mux.v
+* verilog-ethernet/rtl/eth_mux.v
+* verilog-ethernet/rtl/iddr.v
+* verilog-ethernet/rtl/ip.v
+* verilog-ethernet/rtl/ip_arb_mux.v
+* verilog-ethernet/rtl/ip_complete.v
+* verilog-ethernet/rtl/ip_eth_rx.v
+* verilog-ethernet/rtl/ip_eth_tx.v
+* verilog-ethernet/rtl/ip_mux.v
+* verilog-ethernet/rtl/lfsr.v
+* verilog-ethernet/rtl/oddr.v
+* verilog-ethernet/rtl/rgmii_phy_if.v
+* verilog-ethernet/rtl/ssio_ddr_in.v
+* verilog-ethernet/rtl/ssio_ddr_out.v
+* verilog-ethernet/rtl/udp_complete.v
+* verilog-ethernet/rtl/udp_checksum_gen.v
+* verilog-ethernet/rtl/udp.v
+* verilog-ethernet/rtl/udp_ip_rx.v
+* verilog-ethernet/rtl/udp_ip_tx.v
+* verilog-ethernet/lib/axis/rtl/arbiter.v
+* verilog-ethernet/lib/axis/rtl/axis_fifo.v
+* verilog-ethernet/lib/axis/rtl/axis_async_fifo.v
+* verilog-ethernet/lib/axis/rtl/axis_async_fifo_adapter.v
+* verilog-ethernet/lib/axis/rtl/priority_encoder.v
+* verilog-ethernet/lib/axis/rtl/sync_reset.v
 
-fpga.sdc
+* fpga.sdc
 
 ## Future work
 - Support jpg input format and implement decoder on FPGA
