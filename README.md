@@ -1,4 +1,5 @@
-# FPGA Dehazer
+# Real-Time-Image-Video-Dehazing
+
 The aim of this project is to achieve real time dehazing for video (or image).
 
 We utilize DE2-115 FPGA, ethernet connection, camera TRDB-D5M and display through VGA in this project. 
@@ -20,7 +21,8 @@ Contributor:
 * b07901036@g.ntu.edu.tw
 
 ## Features
-- Dehaze picture or video input via ethernet connection or camera
+- Dehaze picture or video input via ethernet connection or camera (The algorithm is hardware-friendly)
+> You can visit CModel for more information
 - Achieve real time usage
 
 ## Limitation
@@ -70,7 +72,7 @@ Config DE2-115/config.h and define Camera
 
 
 ## Compile
-- For **camera** input, you can skip compilation and use DE2_115_camera.sof directly.
+- For **camera** input, follow steps in "Camera Input" and compile through Quartus.
 - For **ethernet** input,  make sure you modify IP address for FPGA and compile through Quartus.
 
 #### 📝 File needed for compilation
