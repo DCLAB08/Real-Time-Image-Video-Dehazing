@@ -6,6 +6,9 @@ We utilize DE2-115 FPGA, ethernet connection, camera TRDB-D5M and display throug
 
 With our own router, we achieve 10 FPS in RGB24 and 15 FPS in RGB16. 
 
+It;'s a short demo gif. The quality is not that good due to conversion from video to gif.
+![demo](RGB24.gif)
+
 ## Block Diagram
 
 ![image](https://user-images.githubusercontent.com/55227796/149613982-843ba80c-0894-459e-a47f-762827ac51a2.png)
